@@ -1,0 +1,350 @@
+.chatWindow {
+    background-color: var(--bg-primary);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar span {
+    margin: 1rem 2rem;
+}
+
+.navbarRight {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 2rem;
+}
+
+.themeToggle {
+    cursor: pointer;
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
+
+.themeToggle:hover {
+    opacity: 1;
+}
+
+.userIconDiv {
+    margin: 0;
+}
+
+.userIcon {
+    background-color: #339cff;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* Chat Input */
+.chatInput {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputBox {
+    width: 100%;
+    position: relative;
+    max-width: 700px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input {
+    width: 100%;
+    border: none;
+    background-color: var(--bg-input);
+    padding: 20px 90px 20px 20px;
+    font-size: 0.8rem;
+    border-radius: 14px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0 54px 55px,
+                rgba(0, 0, 0, 0.05) 0 -12px 30px,
+                rgba(0, 0, 0, 0.05) 0 4px 6px,
+                rgba(0, 0, 0, 0.05) 0 12px 3px,
+                rgba(0, 0, 0, 0.05) 0 -3px 5px;
+}
+
+input:focus {
+    outline: none;
+}
+
+#mic {
+    cursor: pointer;
+    height: 35px;
+    width: 35px;
+    font-size: 18px;
+    position: absolute;
+    right: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#submit {
+    cursor: pointer;
+    height: 35px;
+    width: 35px;
+    font-size: 20px;
+    position: absolute;
+    right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#submit i:hover {
+    color: #fff;
+}
+
+.info {
+    font-size: 0.8rem;
+    padding: 0.5rem;
+    color: var(--text-secondary);
+}
+
+/* Dropdown */
+.dropDown {
+    position: absolute;
+    top: 4rem;
+    right: 4rem;
+    width: 150px;
+    background-color: var(--dropdown-bg);
+    padding: 0.3rem 0.5rem;
+    border-radius: 6px;
+    text-align: left;
+    z-index: 1000;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dropDownItem {
+    font-size: 0.9rem;
+    margin: 0.3rem 0rem;
+    padding: 0.5rem 0.2rem;
+    cursor: pointer;
+}
+
+.dropDownItem:hover {
+    background-color: var(--bg-hover);
+    border-radius: 6px;
+}
+
+/* Modal */
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.modal {
+    background-color: var(--modal-bg);
+    border-radius: 14px;
+    padding: 1.5rem;
+    width: 400px;
+    max-width: 90%;
+}
+
+.modalHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    border-bottom: solid 0.25px var(--border-color);
+    padding-bottom: 1rem;
+}
+
+.modalHeader h2 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.modalHeader i {
+    cursor: pointer;
+    font-size: 1.2rem;
+    opacity: 0.7;
+}
+
+.modalHeader i:hover {
+    opacity: 1;
+}
+
+.modalSection {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: solid 0.25px var(--border-color);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modalSection:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.modalSection h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1rem;
+}
+
+.modalSection p {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin: 0.3rem 0;
+}
+
+.clearBtn {
+    margin-top: 0.8rem;
+    padding: 0.5rem 1rem;
+    background-color: #ef4444;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    width: auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clearBtn:hover {
+    background-color: #dc2626;
+}
+
+.clearStatus {
+    color: var(--text-primary) !important;
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+}
+
+.themeBtn {
+    margin-top: 0.8rem;
+    padding: 0.5rem 1rem;
+    background-color: #339cff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    width: auto;
+}
+
+.themeBtn:hover {
+    background-color: #1a7de0;
+}
+
+/* Recording Bar */
+.recordingBar {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--bg-input);
+    padding: 12px 20px;
+    border-radius: 14px;
+    margin-bottom: 0.5rem;
+    max-width: 700px;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.05) 0 54px 55px,
+                rgba(0, 0, 0, 0.05) 0 -12px 30px;
+}
+
+.recordingWave {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.wave {
+    width: 3px;
+    height: 16px;
+    background-color: var(--text-primary);
+    border-radius: 4px;
+    animation: wave 1s infinite ease-in-out;
+}
+
+.wave:nth-child(1) { animation-delay: 0s; }
+.wave:nth-child(2) { animation-delay: 0.1s; }
+.wave:nth-child(3) { animation-delay: 0.2s; }
+.wave:nth-child(4) { animation-delay: 0.3s; }
+.wave:nth-child(5) { animation-delay: 0.4s; }
+
+@keyframes wave {
+    0%, 100% { transform: scaleY(1); }
+    50% { transform: scaleY(2); }
+}
+
+.recordingBar span {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    flex: 1;
+}
+
+.stopBtn {
+    background-color: var(--bg-hover);
+    color: var(--text-primary);
+    border: solid 1px var(--border-color);
+    cursor: pointer;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 10px;
+    border-radius: 8px;
+    width: auto;
+}
+
+.stopBtn:hover {
+    background-color: #ef4444;
+    color: white;
+    border-color: #ef4444;
+}
+
+.confirmBtn {
+    background-color: var(--bg-hover);
+    color: var(--text-primary);
+    border: solid 1px var(--border-color);
+    cursor: pointer;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 10px;
+    border-radius: 8px;
+    width: auto;
+}
+
+.confirmBtn:hover {
+    background-color: #22c55e;
+    color: white;
+    border-color: #22c55e;
+}

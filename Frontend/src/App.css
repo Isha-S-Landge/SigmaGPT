@@ -1,0 +1,46 @@
+/* Light theme variables */
+[data-theme="light"] {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f4f4f4;
+    --bg-input: rgba(0, 0, 0, 0.05);
+    --bg-hover: rgba(0, 0, 0, 0.05);
+    --text-primary: #1a1a1a;
+    --text-secondary: #4a4a4a;
+    --border-color: rgba(0, 0, 0, 0.2);
+    --sidebar-bg: #ececec;
+    --modal-bg: #f4f4f4;
+    --user-message-bg: #e0e0e0;
+    --dropdown-bg: #f0f0f0;
+}
+
+/* Dark theme variables */
+[data-theme="dark"] {
+    --bg-primary: #212121;
+    --bg-secondary: #2f2f2f;
+    --bg-input: rgba(255, 255, 255, 0.05);
+    --bg-hover: rgba(180, 180, 180, 0.05);
+    --text-primary: #ececec;
+    --text-secondary: #b4b4b4;
+    --border-color: rgba(255, 255, 255, 0.2);
+    --sidebar-bg: #171717;
+    --modal-bg: #2f2f2f;
+    --user-message-bg: #323232;
+    --dropdown-bg: #323232;
+}
+
+* {
+    color: var(--text-primary);
+    font-family: Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-primary);
+}
+
+.app {
+    background-color: var(--bg-primary);
+    display: flex;
+}
