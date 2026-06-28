@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./Login.css";
+import logo from "./assets/blacklogo.png";
 
 function Login({ onLogin }) {
     const [isSignup, setIsSignup] = useState(false);
@@ -46,7 +47,7 @@ function Login({ onLogin }) {
     return (
         <div className="loginPage">
             <div className="loginBox">
-                <img src="src/assets/blacklogo.png" alt="logo" className="loginLogo" />
+                <img src={logo} alt="logo" className="loginLogo" />
                 <h1>SigmaGPT</h1>
                 <p className="loginSubtitle">
                     {isSignup ? "Create your account" : "Welcome back!"}
