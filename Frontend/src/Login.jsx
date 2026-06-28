@@ -14,8 +14,8 @@ function Login({ onLogin }) {
         setLoading(true);
 
         const url = isSignup
-            ? "http://localhost:8080/api/auth/signup"
-            : "http://localhost:8080/api/auth/login";
+            ? "https://sigmagpt-backend-hcsq.onrender.com/api/auth/signup"
+            : "https://sigmagpt-backend-hcsq.onrender.com/api/auth/login";
 
         const body = isSignup
             ? { name, email, password }

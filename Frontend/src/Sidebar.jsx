@@ -11,7 +11,7 @@ function Sidebar() {
 
     const getAllThreads = async () => {
         try {
-            const response = await fetch("http://localhost:8080/api/threads", {
+            const response = await fetch("https://sigmagpt-backend-hcsq.onrender.com/api/threads", {
                 headers: { "Authorization": `Bearer ${token}` }
             });
             const res = await response.json();
@@ -40,7 +40,7 @@ function Sidebar() {
     const changeThread = async (newThreadId) => {
         setCurrThreadId(newThreadId);
         try {
-            const response = await fetch(`http://localhost:8080/api/threads/${newThreadId}`, {
+            const response = await fetch(`https://sigmagpt-backend-hcsq.onrender.com/api/threads/${newThreadId}`, {
                 headers: { "Authorization": `Bearer ${token}` }
             });
             const res = await response.json();
@@ -55,7 +55,7 @@ function Sidebar() {
 
     const deleteThread = async (threadId) => {
         try {
-            const response = await fetch(`http://localhost:8080/api/threads/${threadId}`, {
+            const response = await fetch(`https://sigmagpt-backend-hcsq.onrender.com/api/threads/${threadId}`, {
                 method: "DELETE",
                 headers: { "Authorization": `Bearer ${token}` }
             });
@@ -83,7 +83,7 @@ function Sidebar() {
             return;
         }
         try {
-            const response = await fetch(`http://localhost:8080/api/threads/${threadId}/rename`, {
+            const response = await fetch(`https://sigmagpt-backend-hcsq.onrender.com/api/threads/${threadId}/rename`, {
                 method: "PATCH",
                 headers: {
                     "Content-Type": "application/json",

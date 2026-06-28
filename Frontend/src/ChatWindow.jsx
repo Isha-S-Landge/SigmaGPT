@@ -18,7 +18,7 @@ function ChatWindow() {
         setNewChat(false);
 
         try {
-            const response = await fetch("http://localhost:8080/api/chat", {
+            const response = await fetch("https://sigmagpt-backend-hcsq.onrender.com/api/chat", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -65,7 +65,7 @@ function ChatWindow() {
 
     const clearAllChats = async () => {
         try {
-            const response = await fetch("http://localhost:8080/api/threads", {
+            const response = await fetch("https://sigmagpt-backend-hcsq.onrender.com/api/threads", {
                 method: "DELETE",
                 headers: { "Authorization": `Bearer ${token}` }
             });
