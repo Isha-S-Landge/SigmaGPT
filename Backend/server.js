@@ -13,7 +13,7 @@ app.use(cors({
     origin: [
         "http://localhost:5173",
         "http://localhost:5174",
-        "https://sigmagpt.vercel.app" 
+        "https://sigma-gpt-one-lac.vercel.app" 
     ]
 }));
 app.use("/api", chatRoutes);
